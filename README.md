@@ -2,19 +2,19 @@ from turtle import *
 
 # Set up the screen
 screen = Screen()
-screen.title("Dragon Follows Pointer")
+screen.title("pointer Follows Pointer")
 screen.bgcolor("black")
 
-# Create the dragon (turtle)
-dragon = Turtle()
-dragon.shape("turtle")
-dragon.color("green")
-dragon.speed(0)
+# Create the pointer(turtle)
+pointer = Turtle()
+pointer.shape("turtle")
+pointer.color("green")
+pointer.speed(0)
 
 # Function to move the dragon to the mouse pointer
 def follow_pointer(x, y):
-    dragon.setheading(dragon.towards(x, y))
-    dragon.goto(x, y)
+    pointer.setheading(pointer.towards(x, y))
+    pointer.goto(x, y)
 
 # Bind mouse movement to the follow_pointer function
 screen.onscreenclick(follow_pointer)
